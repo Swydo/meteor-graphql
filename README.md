@@ -1,2 +1,21 @@
-# meteor-graphql
+# Meteor GraphQL
 Compiler plugin that supports GraphQL files in Meteor
+
+## Installation
+```
+meteor add swydo:graphql
+```
+
+## Usage
+```js
+// Import .graphql or .gql files
+import query from './query.graphql';
+
+// See https://github.com/apollographql/apollo-client for setup
+const client = new ApolloClient();
+
+// The query is parsed and can be directly passed to the Apollo Client
+client.query({ query }).then(console.log);
+```
+
+Both `.graphql` and `.gql` files are supported.
