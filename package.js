@@ -6,7 +6,7 @@ var packages = [
 
 Package.describe({
   name: 'swydo:graphql',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'Compiler plugin that supports GraphQL files in Meteor',
   git: 'https://github.com/swydo/meteor-graphql',
   documentation: 'README.md',
