@@ -10,7 +10,6 @@ meteor add swydo:graphql
 
 ## Usage
 ```js
-// Import .graphql or .gql files
 import query from './query.graphql';
 
 // See https://github.com/apollographql/apollo-client for setup
@@ -20,4 +19,4 @@ const client = new ApolloClient();
 client.query({ query }).then(console.log);
 ```
 
-Both `.graphql` and `.gql` files are supported.
+`.graphql`, `.graphqls` and `.gql` files are supported.

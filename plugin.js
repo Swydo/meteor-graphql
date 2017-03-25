@@ -2,7 +2,7 @@
 import GraphQLCompiler from './compiler';
 
 Plugin.registerCompiler({
-  extensions: ['gql', 'graphql'],
+  extensions: ['gql', 'graphql', 'graphqls'],
 }, function compiler() {
   return new GraphQLCompiler();
 });
