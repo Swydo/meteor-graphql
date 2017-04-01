@@ -1,7 +1,9 @@
 # Meteor GraphQL
+
 Compiler plugin that supports GraphQL files in Meteor
 
 [![Build Status](https://travis-ci.org/Swydo/meteor-graphql.svg?branch=master)](https://travis-ci.org/Swydo/meteor-graphql)
+[![Greenkeeper badge](https://badges.greenkeeper.io/Swydo/meteor-graphql.svg)](https://greenkeeper.io/)
 
 ## Installation
 ```
