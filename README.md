@@ -19,6 +19,20 @@ const client = new ApolloClient();
 client.query({ query }).then(console.log);
 ```
 
+You can also import your main schema and pass it directly to `makeExecutableSchema`:
+
+```js
+import { makeExecutableSchema } from 'graphql-tools';
+
+import typeDefs from './schema.graphql'; // No need to parse it!
+import resolvers from './resolvers';
+
+const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers,
+});
+```
+
 `.graphql`, `.graphqls` and `.gql` files are supported.
 
 ## Benefits
