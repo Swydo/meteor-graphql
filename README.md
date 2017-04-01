@@ -20,3 +20,10 @@ client.query({ query }).then(console.log);
 ```
 
 `.graphql`, `.graphqls` and `.gql` files are supported.
+
+## Benefits
+There are some good reasons to use `.graphql` files instead of the inline syntax:
+
+- Good highlighting by GitHub and your IDE
+- No need to manually parse strings with [graphql-tag](https://github.com/apollographql/graphql-tag)
+- The [GraphQL Configuration Protocol](https://github.com/graphcool/graphql-config/issues/20) will support `.graphql` files out of the box
