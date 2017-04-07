@@ -10,7 +10,13 @@ GraphQLCompiler.prototype.processFilesForTarget = function (files) {
       cacheable() {},
     };
 
-    const output = loader.call(context, file.getContentsAsString());
+    const content = file.getContentsAsString().trim();
+    let output = '';
+
+    if (content) {
+      output = loader.call(context, file.getContentsAsString());
+    }
+
     file.addJavaScript({ data: output, path: `${file.getPathInPackage()}.js` });
   });
 };
