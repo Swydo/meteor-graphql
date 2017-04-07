@@ -20,4 +20,10 @@ describe('graphql import', function () {
     chai.expect(kind).to.be.ok;
     chai.expect(definitions).to.be.ok;
   });
+
+  it('should import empty .graphql', function () {
+    const empty = require('./empty.graphql');
+
+    chai.expect(empty).to.deep.equal({});
+  });
 });
