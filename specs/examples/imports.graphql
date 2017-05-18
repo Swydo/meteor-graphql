@@ -1,0 +1,5 @@
+#import "./example.graphql"
+
+type Bar {
+    x: Int
+}

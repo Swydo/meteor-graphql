@@ -26,4 +26,11 @@ describe('graphql import', function () {
 
     chai.expect(empty).to.deep.equal({});
   });
+
+  it('should handle imports', function () {
+    const { kind, definitions } = require('./examples/imports.graphql');
+
+    chai.expect(kind).to.be.ok;
+    chai.expect(definitions.length).to.equal(2);
+  });
 });
