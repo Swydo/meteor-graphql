@@ -4,7 +4,7 @@ import loader from 'graphql-tag/loader';
 export default class GraphQLCompiler {
   processFilesForTarget(files) {
     // Fake webpack context
-    // See https://github.com/apollographql/graphql-tag/blob/master/loader.js#L26
+    // @see https://github.com/apollographql/graphql-tag/blob/master/loader.js#L43
     const context = {
       cacheable() {},
     };
