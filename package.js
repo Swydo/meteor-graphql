@@ -22,7 +22,8 @@ Package.registerBuildPlugin({
     'plugin.js',
   ],
   npmDependencies: {
-    'graphql-tag': '1.3.2',
+    graphql: '0.10.1',
+    'graphql-tag': '2.3.0',
   },
 });
 
