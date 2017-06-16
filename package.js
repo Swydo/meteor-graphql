@@ -23,7 +23,7 @@ Package.registerBuildPlugin({
   ],
   npmDependencies: {
     graphql: '0.10.1',
-    'graphql-tag': '2.3.0',
+    'graphql-tag': '2.4.0',
   },
 });
 
