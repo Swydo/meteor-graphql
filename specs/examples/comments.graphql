@@ -1,0 +1,6 @@
+# This is a type descriptor
+type Foo {
+  # This is a field descriptor
+  bar: String
+  baz: Int
+}
