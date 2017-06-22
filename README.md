@@ -72,4 +72,6 @@ There are some good reasons to use `.graphql` files instead of the inline syntax
 
 - Good highlighting by GitHub and your IDE
 - No need to manually parse strings with [graphql-tag](https://github.com/apollographql/graphql-tag)
+- Small performance gain because queries and schemas are parsed ahead of time
 - The [GraphQL Configuration Protocol](https://github.com/graphcool/graphql-config/issues/20) will support `.graphql` files out of the box
+- Works with [babel-plugin-inline-import](https://www.npmjs.com/package/babel-plugin-inline-import)
