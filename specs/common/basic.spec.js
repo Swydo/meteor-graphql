@@ -21,12 +21,6 @@ describe('graphql import', function () {
     chai.expect(definitions).to.be.ok;
   });
 
-  it('should import empty .graphql', function () {
-    const empty = require('../examples/empty.graphql');
-
-    chai.expect(empty).to.deep.equal({});
-  });
-
   it('should handle imports', function () {
     const { kind, definitions } = require('../examples/imports.graphql');
 

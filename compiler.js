@@ -10,22 +10,28 @@ export default class GraphQLCompiler {
     };
 
     files
-    // Do not load files in the node_modules directory
-    // This should not happen by default, but it is: https://github.com/Swydo/meteor-graphql/issues/5
-    .filter(file => !file.getPathInPackage().includes('node_modules'))
     .forEach(file => {
       const path = `${file.getPathInPackage()}.js`;
       const content = file.getContentsAsString().trim();
-      let data = '';
 
-      if (content) {
-        data = loader.call(context, content);
+      try {
+        const data = loader.call(context, content);
+
+        file.addJavaScript({
+          data,
+          path,
+        });
+      } catch (e) {
+        if (e.locations) {
+          file.error({
+            message: e.message,
+            line: e.locations[0].line,
+            column: e.locations[0].column,
+          });
+          return null;
+        }
+        throw e;
       }
-
-      file.addJavaScript({
-        data,
-        path,
-      });
     });
   }
 }
