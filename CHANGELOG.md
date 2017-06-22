@@ -1,3 +1,11 @@
+## 0.1.1
+
+- Prevent loading any `.graphql` files from `node_modules`
+
+## 0.1.0
+
+- Support Fields Descriptors
+
 ## 0.0.3
 
 - Empty `.graphql` files do no longer crash the server
