@@ -9,7 +9,8 @@
     "eslint": "^3.14.1",
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-import-resolver-meteor": "^0.4.0",
-    "eslint-plugin-import": "2.3.0"
+    "eslint-plugin-import": "2.3.0",
+    "persistgraphql": "^0.3.2"
   },
   "scripts": {
     "eslint": "eslint ./lib",
