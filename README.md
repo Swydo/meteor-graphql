@@ -11,6 +11,18 @@ meteor add swydo:graphql
 ```
 
 ## Usage
+
+### Queries
+```graphql
+# query.grahql
+query getPerson ($id: ID!) {
+  person(id: $id) {
+    name
+    email
+  }
+}
+```
+
 ```js
 import query from './query.graphql';
 
@@ -21,7 +33,24 @@ const client = new ApolloClient();
 client.query({ query }).then(console.log);
 ```
 
-You can also import your main schema and pass it directly to `makeExecutableSchema`:
+### Schemas
+You can also import your main schema and pass it directly to `makeExecutableSchema`.
+
+```graphql
+# schema.graphql
+
+# This is a description of a Person
+# This will show up in GraphiQL
+type Person {
+  id: ID!
+  name: String
+  email: String
+}
+
+type Query {
+  person(id!): Person
+}
+```
 
 ```js
 import { makeExecutableSchema } from 'graphql-tools';
@@ -35,7 +64,8 @@ const schema = makeExecutableSchema({
 });
 ```
 
-`.graphql`, `.graphqls` and `.gql` files are supported.
+## Extensions
+We recommend to always use `.graphql`, but also `.graphqls` and `.gql` files are supported.
 
 ## Benefits
 There are some good reasons to use `.graphql` files instead of the inline syntax:
