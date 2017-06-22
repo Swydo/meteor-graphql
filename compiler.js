@@ -9,7 +9,11 @@ export default class GraphQLCompiler {
       cacheable() {},
     };
 
-    files.forEach(function (file) {
+    files
+    // Do not load files in the node_modules directory
+    // This should not happen by default, but it is: https://github.com/Swydo/meteor-graphql/issues/5
+    .filter(file => !file.getPathInPackage().includes('node_modules'))
+    .forEach(file => {
       const path = `${file.getPathInPackage()}.js`;
       const content = file.getContentsAsString().trim();
       let data = '';
