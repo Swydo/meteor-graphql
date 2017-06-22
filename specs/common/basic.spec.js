@@ -4,38 +4,38 @@ import { chai } from 'meteor/practicalmeteor:chai';
 
 describe('graphql import', function () {
   it('should import .graphql', function () {
-    const { kind, definitions } = require('./examples/example.graphql');
+    const { kind, definitions } = require('../examples/example.graphql');
     chai.expect(kind).to.be.ok;
     chai.expect(definitions).to.be.ok;
   });
 
   it('should import .graphqls', function () {
-    const { kind, definitions } = require('./examples/schema.graphqls');
+    const { kind, definitions } = require('../examples/schema.graphqls');
     chai.expect(kind).to.be.ok;
     chai.expect(definitions).to.be.ok;
   });
 
   it('should import .gql', function () {
-    const { kind, definitions } = require('./examples/example2.gql');
+    const { kind, definitions } = require('../examples/example2.gql');
     chai.expect(kind).to.be.ok;
     chai.expect(definitions).to.be.ok;
   });
 
   it('should import empty .graphql', function () {
-    const empty = require('./examples/empty.graphql');
+    const empty = require('../examples/empty.graphql');
 
     chai.expect(empty).to.deep.equal({});
   });
 
   it('should handle imports', function () {
-    const { kind, definitions } = require('./examples/imports.graphql');
+    const { kind, definitions } = require('../examples/imports.graphql');
 
     chai.expect(kind).to.be.ok;
     chai.expect(definitions.length).to.equal(2);
   });
 
   it('should handle comments as descriptors', function () {
-    const { definitions } = require('./examples/comments.graphql');
+    const { definitions } = require('../examples/comments.graphql');
 
     chai.expect(definitions[0].description).to.equal('This is a type descriptor');
     chai.expect(definitions[0].fields[0].description).to.equal('This is a field descriptor');

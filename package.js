@@ -6,7 +6,7 @@ var packages = [
 
 Package.describe({
   name: 'swydo:graphql',
-  version: '0.1.0',
+  version: '0.1.1',
   summary: 'Compiler plugin that supports GraphQL files in Meteor',
   git: 'https://github.com/swydo/meteor-graphql',
   documentation: 'README.md',
@@ -43,6 +43,6 @@ Package.onTest(function test(api) {
     'dispatch:mocha-phantomjs',
   ]);
 
-  api.mainModule('specs/basic.spec.js', 'server');
-  api.mainModule('specs/basic.spec.js', 'client');
+  api.mainModule('specs/server.spec.js', 'server');
+  api.mainModule('specs/client.spec.js', 'client');
 });
