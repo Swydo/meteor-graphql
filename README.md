@@ -75,3 +75,8 @@ There are some good reasons to use `.graphql` files instead of the inline syntax
 - Small performance gain because queries and schemas are parsed ahead of time
 - The [GraphQL Configuration Protocol](https://github.com/graphcool/graphql-config/issues/20) will support `.graphql` files out of the box
 - Works with [babel-plugin-inline-import](https://www.npmjs.com/package/babel-plugin-inline-import)
+
+## Sponsor
+[![Swydo](http://assets.swydo.com/img/s-wydo-logo.228x100.png)](https://swy.do)
+
+Want to work with Meteor and GraphQL? [Join the team!](https://swy.do/jobs)
