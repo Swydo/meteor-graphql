@@ -6,7 +6,7 @@
   "main": "lib/setup.js",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^3.14.1",
+    "eslint": "^4.1.0",
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-import-resolver-meteor": "^0.4.0",
     "eslint-plugin-import": "2.6.0"
