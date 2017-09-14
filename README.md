@@ -64,6 +64,18 @@ const schema = makeExecutableSchema({
 });
 ```
 
+### Importing .graphql files in other .graphql files
+The cool thing is that you can use import comments, that will import all definitions from another file:
+
+```graphql
+#import "./personSchema.graphql"
+
+type Query {
+  # It will recognize the Person type from the personSchema.graphql file
+  person(id): Person
+}
+```
+
 ## Extensions
 We recommend to always use `.graphql`, but also `.graphqls` and `.gql` files are supported.
 
