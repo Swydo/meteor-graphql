@@ -10,28 +10,28 @@ export default class GraphQLCompiler {
     };
 
     files
-    .forEach(file => {
-      const path = `${file.getPathInPackage()}.js`;
-      const content = file.getContentsAsString().trim();
+      .forEach((file) => {
+        const path = `${file.getPathInPackage()}.js`;
+        const content = file.getContentsAsString().trim();
 
-      try {
-        const data = loader.call(context, content);
+        try {
+          const data = loader.call(context, content);
 
-        file.addJavaScript({
-          data,
-          path,
-        });
-      } catch (e) {
-        if (e.locations) {
-          file.error({
-            message: e.message,
-            line: e.locations[0].line,
-            column: e.locations[0].column,
+          file.addJavaScript({
+            data,
+            path,
           });
-          return null;
+        } catch (e) {
+          if (e.locations) {
+            file.error({
+              message: e.message,
+              line: e.locations[0].line,
+              column: e.locations[0].column,
+            });
+            return null;
+          }
+          throw e;
         }
-        throw e;
-      }
-    });
+      });
   }
 }
