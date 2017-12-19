@@ -1,3 +1,8 @@
+## 0.4.0
+
+- Updated `graphql` to `0.12.3`, adding support for string descriptors
+- Updated `graphql-tag` to `2.6.1`, adding support for multiple exports
+
 ## 0.3.0
 
 - Updated `graphql` to `0.11.3`
