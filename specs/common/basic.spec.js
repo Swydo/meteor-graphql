@@ -31,8 +31,9 @@ describe('graphql import', function () {
   it('should handle comments as descriptors', function () {
     const { definitions } = require('../examples/comments.graphql');
 
-    chai.expect(definitions[0].description).to.equal('This is a type descriptor');
-    chai.expect(definitions[0].fields[0].description).to.equal('This is a field descriptor');
+    chai.expect(definitions[0].description.kind).to.equal('StringValue');
+    chai.expect(definitions[0].description.value).to.equal('This is a type descriptor');
+    chai.expect(definitions[0].fields[0].description.value).to.equal('This is a field descriptor');
     chai.expect(definitions[0].fields[1].description).to.equal(undefined);
   });
 });

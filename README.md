@@ -39,8 +39,10 @@ You can also import your main schema and pass it directly to `makeExecutableSche
 ```graphql
 # schema.graphql
 
-# This is a description of a Person
-# This will show up in GraphiQL
+"""
+This is a description of a Person
+This will show up in GraphiQL
+"""
 type Person {
   id: ID!
   name: String
