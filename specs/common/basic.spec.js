@@ -36,4 +36,11 @@ describe('graphql import', function () {
     chai.expect(definitions[0].fields[0].description.value).to.equal('This is a field descriptor');
     chai.expect(definitions[0].fields[1].description).to.equal(undefined);
   });
+
+  it('loads multiple queries', function () {
+    const { foo, bar } = require('../examples/multiple.graphql');
+
+    chai.expect(foo.kind).to.be.ok;
+    chai.expect(bar.kind).to.be.ok;
+  });
 });
