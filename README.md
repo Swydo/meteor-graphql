@@ -33,6 +33,29 @@ const client = new ApolloClient();
 client.query({ query }).then(console.log);
 ```
 
+#### Multiple queries in one file
+It's also possible to define multiple queries in one file:
+
+```graphql
+# queries.grahql
+
+query foo {
+    baz
+}
+
+query bar {
+    baz
+}
+```
+
+```js
+import { foo, bar } from './queries.graphql';
+
+const client = new ApolloClient();
+
+client.query({ query: foo }).then(console.log);
+```
+
 ### Schemas
 You can also import your main schema and pass it directly to `makeExecutableSchema`.
 
