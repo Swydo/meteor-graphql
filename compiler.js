@@ -28,9 +28,9 @@ export default class GraphQLCompiler {
               line: e.locations[0].line,
               column: e.locations[0].column,
             });
-            return null;
+          } else {
+            throw e;
           }
-          throw e;
         }
       });
   }
