@@ -1,6 +1,6 @@
 /* eslint-disable prefer-arrow-callback, func-names, global-require */
 /* eslint-env mocha */
-import { chai } from 'meteor/practicalmeteor:chai';
+import chai from 'chai';
 
 describe('graphql import', function () {
   it('should import .graphql', function () {
