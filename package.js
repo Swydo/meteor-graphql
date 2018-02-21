@@ -38,10 +38,7 @@ Package.onTest(function test(api) {
   api.use('swydo:graphql');
 
   api.use([
-    'coffeescript@1.12.7_3',
-    'practicalmeteor:mocha@2.4.5_6',
-    'dispatch:phantomjs-tests@=0.0.5',
-    'dispatch:mocha-phantomjs',
+    'meteortesting:mocha',
   ]);
 
   api.mainModule('specs/server.spec.js', 'server');
