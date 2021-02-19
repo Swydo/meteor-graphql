@@ -1,3 +1,8 @@
+## 1.0.0
+
+- Updated `graphql` to `15.5.0`, adding support for latests graphql features
+- Updated `graphql-tag` to `2.11.0`, support for graphql 15.5.0
+
 ## 0.4.0
 
 - Updated `graphql` to `0.12.3`, adding support for string descriptors
