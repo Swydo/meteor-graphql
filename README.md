@@ -5,6 +5,8 @@ Compiler plugin that supports GraphQL files in Meteor
 [![Build Status](https://travis-ci.org/Swydo/meteor-graphql.svg?branch=master)](https://travis-ci.org/Swydo/meteor-graphql)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Swydo/meteor-graphql.svg)](https://greenkeeper.io/)
 
+<img width="830" alt="Github Header" src="https://user-images.githubusercontent.com/2283434/183906965-4d07a08e-81a7-4960-980d-768dcc188562.png">
+
 ## Installation
 ```
 meteor add swydo:graphql
@@ -114,6 +116,5 @@ There are some good reasons to use `.graphql` files instead of the inline syntax
 - Works with [babel-plugin-inline-import](https://www.npmjs.com/package/babel-plugin-inline-import)
 
 ## Sponsor
-[![Swydo](http://assets.swydo.com/img/s-wydo-logo.228x100.png)](https://swy.do)
 
 Want to work with Meteor and GraphQL? [Join the team!](https://swy.do/jobs)
